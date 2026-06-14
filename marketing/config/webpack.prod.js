@@ -9,6 +9,7 @@ const prodConfig = {
   output: {
     filename: "mfe_marketing_[name].[contenthash].js", // template string for the filename
   },
+  publicPath: "/marketing/latest/",
   plugins: [
     new ModuleFederationPlugin({
       name: "marketing",
