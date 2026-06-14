@@ -8,8 +8,8 @@ const prodConfig = {
   mode: "production",
   output: {
     filename: "mfe_marketing_[name].[contenthash].js", // template string for the filename
+    publicPath: "/marketing/latest/",
   },
-  publicPath: "/marketing/latest/",
   plugins: [
     new ModuleFederationPlugin({
       name: "marketing",
@@ -17,13 +17,7 @@ const prodConfig = {
       exposes: {
         "./MarketingApp": "./src/bootstrap",
       },
-      /**
-       * shared: {
-       *   react: { singleton: true },
-       *   "react-dom": { singleton: true },
-       *   "react-router-dom": { singleton: true },
-       * }
-       */
+
       shared,
     }),
   ],
