@@ -9,6 +9,7 @@ const devConfig = {
   mode: "development",
   devServer: {
     port: 8081,
+    historyApiFallback: true,
   },
 
   plugins: [
